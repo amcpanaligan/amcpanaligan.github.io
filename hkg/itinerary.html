@@ -25,16 +25,43 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <style>
+        .container-fluid {
+            margin-top: 15px;
+        }
+    </style>
+
 </head>
 
-<body>
+<body ng-app="HKG">
     <div class="container-fluid">
-        <div class="row day1">
-            <div class="col-xs-12 text-center">
-                <h1>March 17</h1>
-            </div>
-            <div class="col-xs-4">
-            </div>
+        <div class="row">
+            <uib-tabset justified="true">
+                <uib-tab heading="March 17" index="0">
+                    March 17 Itinerary
+                </uib-tab>
+                <uib-tab heading="March 18" index="1">
+                    March 18 Itinerary
+                </uib-tab>
+                <uib-tab heading="March 19" index="2">
+                    March 19 Itinerary
+                </uib-tab>
+                <uib-tab heading="March 20" index="3">
+                    March 20 Itinerary
+                </uib-tab>
+                <uib-tab heading="March 21" index="4">
+                    March 21 Itinerary
+                </uib-tab>
+                <uib-tab heading="March 22" index="5">
+                    March 22 Itinerary
+                </uib-tab>
+                <uib-tab heading="March 23" index="6">
+                    March 23 Itinerary
+                </uib-tab>
+                <uib-tab heading="March 24" index="7">
+                    March 24 Itinerary
+                </uib-tab>
+            </uib-tabset>
         </div>
     </div>
 
@@ -43,6 +70,17 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+
+    <script>
+        (function(angular) {
+            'use strict';
+            
+            var app = angular.module('HKG', ['ui.bootstrap']);
+        })(angular);
+    </script>
 
 </body>
 
