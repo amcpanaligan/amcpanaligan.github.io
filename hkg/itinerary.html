@@ -26,9 +26,6 @@
     <![endif]-->
 
     <style>
-        .container-fluid {
-            margin-top: 15px;
-        }
         
         .margin-top-15 {
             margin-top: 15px;
@@ -40,11 +37,13 @@
 <body ng-app="HKG">
     <div class="container-fluid" ng-controller="hkgCtrl as vm">
         <div class="row">
+            <h4 class="text-center">Hong Kong - March 2018</h4>
             <uib-accordion>
                 <div uib-accordion-group class="panel-info" heading="March 17">
                     <itinerary activities="vm.march17Activities" expenses="vm.march17Expenses"></itinerary>
                 </div>
                 <div uib-accordion-group class="panel-info" heading="March 18">
+                    <itinerary activities="vm.march18Activities" expenses="vm.march18Expenses"></itinerary>
                 </div>
                 <div uib-accordion-group class="panel-info" heading="March 19">
                 </div>

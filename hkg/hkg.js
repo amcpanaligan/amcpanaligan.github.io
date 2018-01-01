@@ -2,7 +2,7 @@
     'use strict';
 
     var app = angular.module('HKG', ['ngSanitize', 'ui.bootstrap']);
-    
+
     app.directive('itinerary', [function () {
         return {
             restrict: 'E',
@@ -11,11 +11,11 @@
                 expenses: '='
             },
             templateUrl: 'templates/itinerary-tpl.html',
-            link: function(scope) {
+            link: function (scope) {
                 scope.mapFn = function (value) {
                     return value.amount;
                 };
-                
+
                 scope.sumFn = function (a, b) {
                     return a + b;
                 };
@@ -77,6 +77,93 @@
                 amount: 320
             }
         ];
+
+        vm.march18Activities = [
+            {
+                activity: 'Rise',
+                time: '0800H',
+                notes: [
+                    'Check essentials (e.g. Phone, Money)',
+                ]
+            },
+            {
+                activity: 'Breakfast',
+                time: '0845H',
+                notes: [
+                    'Dimdimsum Dimsum Specialty Store. G/F., 112 Tung Choi Street, Mong Kok',
+                ]
+            },
+            {
+                activity: 'Depart from Mong Kok to Central via MTR. <strong>Exit A</strong>',
+                time: '0915H',
+            },
+            {
+                activity: 'From Central MTR Exit A, proceed to <strong>Exchange Square Bus Terminus</strong>',
+                time: '0940H',
+                notes: [
+                    'When you arrive at the street level, immediately turn right and you will see an escalator on your right going up to a pedestrian footbridge over Connaught Road. Go up, turn left, and cross Connaught Road. The first building on your left hand is Exchange Square, and the bus terminus is located on ground level underneath the Exchange Square building',
+                ]
+            },
+            {
+                activity: 'Trip to Repulse Bay. Get on <strong>Bus 6, 6A, 6X, 66 or 260</strong>',
+                time: '1000H',
+            },
+            {
+                activity: 'Depart from Repulse Bay to Stanley Village. Get on <strong>Bus 6, 6A, 6X, 66 or 260</strong>',
+                time: '1145H',
+            },
+            {
+                activity: 'Stanley Village (don\'t forget to have lunch lul)',
+                time: '1215H'
+            },
+            {
+                activity: 'Stanley Village to Central. Get on <strong>Bus 6, 6A, 6X, 66 or 260</strong>',
+                time: '1330H'
+            },
+            {
+                activity: 'Central to Mong Kok via MTR',
+                time: '1445H'
+            },
+            {
+                activity: 'Rest',
+                time: '1515H'
+            },
+            {
+                activity: 'Depart to Macau.',
+                time: '1515H'
+            }
+        ];
+        
+        vm.march18Expenses = [
+            {
+                expense: 'Dimdimsum Dimsum Specialty Store',
+                amount: 250
+            },
+            {
+                expense: 'Mong Kok to Central via MTR',
+                amount: 80
+            },
+            {
+                expense: 'Exchange Square (Central) to Respulse Bay',
+                amount: 50
+            },
+            {
+                expense: 'Respulse Bay to Stanley Village via Bus 6, 6A, 6X, 66 or 260',
+                amount: 50
+            },
+            {
+                expense: 'Lunch at Stanley Village',
+                amount: 250
+            },
+            {
+                expense: 'Stanley Village and Market Misc',
+                amount: 500
+            },
+            {
+                expense: 'Respulse Bay to Exchange Square (Central)',
+                amount: 80
+            },
+        ]
     }]);
 
 })(angular);

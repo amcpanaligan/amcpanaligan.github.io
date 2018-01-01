@@ -9,7 +9,7 @@
             </thead>
             <tbody>
                 <tr ng-repeat="item in activities">
-                    <td>{{$index + 1}}. {{item.activity}}</td>
+                    <td>{{$index + 1}}. <span ng-bind-html="item.activity"></span></td>
                     <td>{{item.time}}</td>
                 </tr>
             </tbody>
@@ -20,7 +20,7 @@
     <div class="col-xs-12">
         <ol>
             <li ng-repeat="item in activities">
-                {{item.activity}}
+                <span ng-bind-html="item.activity"></span>
                 <ol type="a">
                     <li ng-repeat="note in item.notes">
                         <span ng-bind-html="note"></span>
