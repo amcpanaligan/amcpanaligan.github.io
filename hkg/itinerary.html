@@ -38,13 +38,13 @@
 </head>
 
 <body ng-app="HKG">
-    <div class="container-fluid">
+    <div class="container-fluid" ng-controller="hkgCtrl as vm">
         <div class="row">
             <uib-tabset justified="true">
                 <uib-tab heading="March 17" index="0">
                     <div class="row margin-top-15">
-                        <div class="col-xs-4">
-                            <table class="table table-striped table-hover">
+                        <div class="col-xs-12">
+                            <table class="table table-striped table-bordered table-hover">
                                 <thead>
                                     <tr>
                                         <th>Activity</th>
@@ -52,13 +52,45 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <tr ng-repeat="item in vm.march17Activities">
+                                        <td>{{$index + 1}}. {{item.activity}}</td>
+                                        <td>{{item.time}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <ol>
+                                <li ng-repeat="item in vm.march17Activities">
+                                    {{item.activity}}
+                                    <ol type="a">
+                                        <li ng-repeat="note in item.notes">
+                                            <span ng-bind-html="note"></span>
+                                        </li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <table class="table table-striped table-bordered table-hover">
+                                <thead>
                                     <tr>
-                                        <td>1. HKG Airport Arrival</td>
-                                        <td>2130H</td>
+                                        <th>Expense</th>
+                                        <th>Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="item in vm.march17Expenses">
+                                        <td>{{$index + 1}}. {{item.expense}}</td>
+                                        <td>P{{item.amount}}</td>
                                     </tr>
                                     <tr>
-                                        <td>2. Transfer to Mong Kok, Kowloon</td>
-                                        <td>2145H-2200H</td>
+                                        <td>Total</td>
+                                        <td>P{{vm.march17Expenses.map(vm.mapFn).reduce(vm.sumFn, 0)}}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -97,15 +129,10 @@
     <script src="../js/bootstrap.min.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.6.8/angular-sanitize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
 
-    <script>
-        (function(angular) {
-            'use strict';
-            
-            var app = angular.module('HKG', ['ui.bootstrap']);
-        })(angular);
-    </script>
+    <script src="hkg.js"></script>
 
 </body>
 
