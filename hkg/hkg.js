@@ -2,17 +2,29 @@
     'use strict';
 
     var app = angular.module('HKG', ['ngSanitize', 'ui.bootstrap']);
+    
+    app.directive('itinerary', [function () {
+        return {
+            restrict: 'E',
+            scope: {
+                activities: '=',
+                expenses: '='
+            },
+            templateUrl: 'templates/itinerary-tpl.html',
+            link: function(scope) {
+                scope.mapFn = function (value) {
+                    return value.amount;
+                };
+                
+                scope.sumFn = function (a, b) {
+                    return a + b;
+                };
+            }
+        }
+    }]);
 
     app.controller('hkgCtrl', [function () {
         var vm = this;
-        
-        vm.mapFn = function(value) {
-            return value.amount;
-        };
-        
-        vm.sumFn = function (a, b) {
-            return a + b;
-        };
 
         vm.march17Activities = [
             {
@@ -24,15 +36,26 @@
             },
             {
                 activity: 'Transfer to Mong Kok',
-                time: '2145H'
+                time: '2145H',
+                notes: [
+                    'Ride <strong>Route A21</strong> bus',
+                    'Get off <strong>8th stop, Sino Centre, Nathan Road</strong>'
+                ]
             },
             {
                 activity: 'Accommodation check-in',
-                time: '2210H'
+                time: '2210H',
+                notes: [
+                    'Contact Airbnb host, <strong>John (+852 9836 4332)</strong>',
+                    'Look for <strong>Sun Hing Building, 26F</strong>'
+                ]
             },
             {
                 activity: 'Late Dinner',
-                time: '2230H'
+                time: '2230H',
+                notes: [
+                    'Grab some Street Food at <strong>Dundas Street cor. Sai Yeung Choi Street South</strong>'
+                ]
             }
         ];
 

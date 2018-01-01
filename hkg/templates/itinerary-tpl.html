@@ -1,0 +1,54 @@
+<div class="row margin-top-15">
+    <div class="col-xs-12">
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Activity</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in activities">
+                    <td>{{$index + 1}}. {{item.activity}}</td>
+                    <td>{{item.time}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <ol>
+            <li ng-repeat="item in activities">
+                {{item.activity}}
+                <ol type="a">
+                    <li ng-repeat="note in item.notes">
+                        <span ng-bind-html="note"></span>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Expense</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in expenses">
+                    <td>{{$index + 1}}. {{item.expense}}</td>
+                    <td>P{{item.amount}}</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>P{{expenses.map(mapFn).reduce(sumFn, 0)}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

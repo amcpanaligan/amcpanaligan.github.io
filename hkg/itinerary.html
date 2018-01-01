@@ -42,63 +42,10 @@
         <div class="row">
             <uib-tabset justified="true">
                 <uib-tab heading="March 17" index="0">
-                    <div class="row margin-top-15">
-                        <div class="col-xs-12">
-                            <table class="table table-striped table-bordered table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>Activity</th>
-                                        <th>Time</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr ng-repeat="item in vm.march17Activities">
-                                        <td>{{$index + 1}}. {{item.activity}}</td>
-                                        <td>{{item.time}}</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <ol>
-                                <li ng-repeat="item in vm.march17Activities">
-                                    {{item.activity}}
-                                    <ol type="a">
-                                        <li ng-repeat="note in item.notes">
-                                            <span ng-bind-html="note"></span>
-                                        </li>
-                                    </ol>
-                                </li>
-                            </ol>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <table class="table table-striped table-bordered table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>Expense</th>
-                                        <th>Amount</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr ng-repeat="item in vm.march17Expenses">
-                                        <td>{{$index + 1}}. {{item.expense}}</td>
-                                        <td>P{{item.amount}}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Total</td>
-                                        <td>P{{vm.march17Expenses.map(vm.mapFn).reduce(vm.sumFn, 0)}}</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                    <itinerary activities="vm.march17Activities" expenses="vm.march17Expenses"></itinerary>
                 </uib-tab>
                 <uib-tab heading="March 18" index="1">
-                    March 18 Itinerary
+
                 </uib-tab>
                 <uib-tab heading="March 19" index="2">
                     March 19 Itinerary
