@@ -105,23 +105,32 @@
                 ]
             },
             {
-                activity: 'Trip to Repulse Bay. Get on <strong>Bus 6, 6A, 6X, 66 or 260</strong>',
+                activity: 'Trip to Repulse Bay',
                 time: '1000H',
+                notes: [
+                    'Get on <strong>Bus 6, 6A, 6X, 66 or 260</strong>'
+                ]
             },
             {
-                activity: 'Depart from Repulse Bay to Stanley Village. Get on <strong>Bus 6, 6A, 6X, 66 or 260</strong>',
+                activity: 'Repulse Bay to Stanley Village',
                 time: '1145H',
+                notes: [
+                    'Get on <strong>Bus 6, 6A, 6X, 66 or 260</strong>'
+                ]
             },
             {
-                activity: 'Stanley Village (don\'t forget to have lunch lul)',
+                activity: 'Stanley Village',
                 time: '1215H'
             },
             {
-                activity: 'Stanley Village to Central. Get on <strong>Bus 6, 6A, 6X, 66 or 260</strong>',
-                time: '1330H'
+                activity: 'Stanley Village to Central',
+                time: '1330H',
+                notes: [
+                    'Depart Stanley Village to Central. Get on <strong>Bus 6, 6A, 6X, 66 or 260</strong>'
+                ]
             }, 
             {
-                activity: 'Central to Mong Kok',
+                activity: 'Back to hotel (Central to Mong Kok)',
                 time: '1430H'
             },
             {
@@ -145,7 +154,7 @@
                 ]
             },
             {
-                activity: 'Open Top Bus Night Tour in Macau',
+                activity: 'Open Top Bus Night Tour Macau',
                 time: '1900H-2030H',
                 notes: [
                     'From Broadway Macau walk to <strong>Rotunda Da Piscina Olimpica</strong>',
@@ -178,11 +187,11 @@
                 amount: 50
             },
             {
-                expense: 'Lunch at Stanley Village',
+                expense: 'Lunch',
                 amount: 250
             },
             {
-                expense: 'Stanley Village and Market Misc',
+                expense: 'Stanley Village and Market Misc (Pasalubong lul)',
                 amount: 1000
             },
             {
@@ -210,7 +219,7 @@
                 amount: 300
             },
             {
-                expense: 'Open Top Bus Night Tour Macau with dinner (Klook)',
+                expense: 'Open Top Bus Night Tour Macau with Dinner (Klook)',
                 amount: 1100
             }
         ]
