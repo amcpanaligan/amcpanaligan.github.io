@@ -146,18 +146,16 @@
             },
             {
                 activity: 'Open Top Bus Night Tour in Macau',
-                time: '1900H',
+                time: '1900H-2030H',
                 notes: [
                     'From Broadway Macau walk to <strong>Rotunda Da Piscina Olimpica</strong>',
-                    'Ride <strong>Bus MT4</strong> towards Riviera Macao'
+                    'Ride <strong>Bus 25x</strong> towards Border Gate. Arrive Flower City',
+                    'Walk to Chun Yuet Garden Building',
+                    'Ride <strong>Bus AP1</strong> towards Border Gate. Walk to ferry'
                 ]
             },
             {
-                activity: 'Free Time',
-                time: '2030H'
-            },
-            {
-                activity: 'Transfer back to Hong Kong (Take 2130H ferry)',
+                activity: 'Transfer back to Hong Kong (Take 2200H ferry)',
                 time: '2130H'
             }
         ];
@@ -208,7 +206,11 @@
                 amount: 300
             },
             {
-                expense: 'Open Top Bus Night Tour Macau (Klook)',
+                expense: 'Macau Misc',
+                amount: 300
+            },
+            {
+                expense: 'Open Top Bus Night Tour Macau with dinner (Klook)',
                 amount: 1100
             }
         ]
