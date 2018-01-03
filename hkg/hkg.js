@@ -119,18 +119,46 @@
             {
                 activity: 'Stanley Village to Central. Get on <strong>Bus 6, 6A, 6X, 66 or 260</strong>',
                 time: '1330H'
-            },
+            }, 
             {
-                activity: 'Central to Mong Kok via MTR',
-                time: '1445H'
+                activity: 'Central to Mong Kok',
+                time: '1430H'
             },
             {
                 activity: 'Rest',
-                time: '1515H'
+                time: '1500H'
             },
             {
-                activity: 'Depart to Macau.',
-                time: '1515H'
+                activity: 'Transfer to Hong Kong Macau Ferry Terminal',
+                time: '1600H',
+                notes: [
+                    'Mong Kok to Central via MTR',
+                    'Walk from Central to Sheung Wan Station',
+                    'From Sheung Wan, walk to the ferry terminal'
+                ]
+            },
+            {
+                activity: 'Depart to Macau (Take 1700H ferry)',
+                time: '1630H',
+                notes: [
+                    'Grab something to eat'
+                ]
+            },
+            {
+                activity: 'Open Top Bus Night Tour in Macau',
+                time: '1900H',
+                notes: [
+                    'From Broadway Macau walk to <strong>Rotunda Da Piscina Olimpica</strong>',
+                    'Ride <strong>Bus MT4</strong> towards Riviera Macao'
+                ]
+            },
+            {
+                activity: 'Free Time',
+                time: '2030H'
+            },
+            {
+                activity: 'Transfer back to Hong Kong (Take 2130H ferry)',
+                time: '2130H'
             }
         ];
         
@@ -163,6 +191,26 @@
                 expense: 'Respulse Bay to Exchange Square (Central)',
                 amount: 80
             },
+            {
+                expense: 'Central to Mong Kok via MTR',
+                amount: 80
+            },
+            {
+                expense: 'Mong Kok to Central via MTR',
+                amount: 80
+            },
+            {
+                expense: 'HKG <> Macau Ferry fee (Klook)',
+                amount: 1900
+            },
+            {
+                expense: 'Misc food',
+                amount: 300
+            },
+            {
+                expense: 'Open Top Bus Night Tour Macau (Klook)',
+                amount: 1100
+            }
         ]
     }]);
 
