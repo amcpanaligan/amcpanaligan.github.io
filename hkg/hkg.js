@@ -183,7 +183,7 @@
             },
             {
                 expense: 'Stanley Village and Market Misc',
-                amount: 500
+                amount: 1000
             },
             {
                 expense: 'Respulse Bay to Exchange Square (Central)',
