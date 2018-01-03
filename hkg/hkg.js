@@ -35,7 +35,7 @@
                 ]
             },
             {
-                activity: 'Transfer to Mong Kok',
+                activity: 'Transfer to Mong Kok via Airport Express Bus (A21)',
                 time: '2145H',
                 notes: [
                     'Ride <strong>Route A21</strong> bus',
@@ -54,7 +54,7 @@
                 activity: 'Late Dinner',
                 time: '2230H',
                 notes: [
-                    'Grab some Street Food at <strong>Dundas Street cor. Sai Yeung Choi Street South</strong>'
+                    'Try street foods at <strong>Dundas Street cor. Sai Yeung Choi Street South</strong>'
                 ]
             }
         ];
