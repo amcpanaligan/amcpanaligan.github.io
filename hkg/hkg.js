@@ -105,14 +105,14 @@
                 ]
             },
             {
-                activity: 'Trip to Repulse Bay',
+                activity: 'Trip to Repulse Bay (<strong>Bus 6, 6A, 6X, 66 or 260</strong>)',
                 time: '1000H',
                 notes: [
                     'Get on <strong>Bus 6, 6A, 6X, 66 or 260</strong>'
                 ]
             },
             {
-                activity: 'Repulse Bay to Stanley Village',
+                activity: 'Repulse Bay to Stanley Village (<strong>Bus 6, 6A, 6X, 66 or 260</strong>)',
                 time: '1145H',
                 notes: [
                     'Get on <strong>Bus 6, 6A, 6X, 66 or 260</strong>'
@@ -123,14 +123,14 @@
                 time: '1215H'
             },
             {
-                activity: 'Stanley Village to Central',
+                activity: 'Stanley Village to Central (<strong>Bus 6, 6A, 6X, 66 or 260</strong>)',
                 time: '1330H',
                 notes: [
                     'Depart Stanley Village to Central. Get on <strong>Bus 6, 6A, 6X, 66 or 260</strong>'
                 ]
             }, 
             {
-                activity: 'Back to hotel (Central to Mong Kok)',
+                activity: 'Back to hotel (Central to Mong Kok via MTR)',
                 time: '1430H'
             },
             {
