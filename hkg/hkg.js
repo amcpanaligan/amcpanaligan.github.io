@@ -62,19 +62,26 @@
         vm.march17Expenses = [
             {
                 expense: 'Tourist Octopus (Klook)',
-                amount: 627
+                amount: 627,
+                type: 'Klook',
+                subType: 'Transportation'
             },
             {
                 expense: '4G SIM Card (Klook)',
-                amount: 339
+                amount: 339,
+                type: 'Klook',
+                subType: 'Transportation'
             },
             {
                 expense: 'Route A21 Bus',
-                amount: 211
+                amount: 211,
+                type: 'Transportation',
+                subType: 'Bus'
             },
             {
                 expense: 'Dinner',
-                amount: 320
+                amount: 320,
+                type: 'Food'
             }
         ];
 
@@ -172,57 +179,171 @@
         vm.march18Expenses = [
             {
                 expense: 'Dimdimsum Dimsum Specialty Store',
-                amount: 250
+                amount: 250,
+                type: 'Food'
             },
             {
-                expense: 'Mong Kok to Central via MTR',
-                amount: 80
+                expense: 'Mong Kok to Central (MTR)',
+                amount: 80,
+                type: 'Transportation',
+                subType: 'MTR'
             },
             {
-                expense: 'Exchange Square (Central) to Respulse Bay',
-                amount: 50
+                expense: 'Exchange Square (Central) to Repulse Bay (Bus)',
+                amount: 50,
+                type: 'Transportation',
+                subType: 'Bus'
             },
             {
-                expense: 'Respulse Bay to Stanley Village via Bus 6, 6A, 6X, 66 or 260',
-                amount: 50
+                expense: 'Respulse Bay to Stanley Village (Bus)',
+                amount: 50,
+                type: 'Transportation',
+                subType: 'Bus'
             },
             {
                 expense: 'Lunch',
-                amount: 250
+                amount: 250,
+                type: 'Food'
             },
             {
                 expense: 'Stanley Village and Market Misc (Pasalubong lul)',
-                amount: 1000
+                amount: 1000,
+                type: 'Extra'
             },
             {
-                expense: 'Respulse Bay to Exchange Square (Central)',
-                amount: 80
+                expense: 'Respulse Bay to Exchange Square (Central) (Bus)',
+                amount: 80,
+                type: 'Transportation',
+                subType: 'Bus'
             },
             {
-                expense: 'Central to Mong Kok via MTR',
-                amount: 80
+                expense: 'Central to Mong Kok (MTR)',
+                amount: 80,
+                type: 'Transportation',
+                subType: 'MTR'
             },
             {
-                expense: 'Mong Kok to Central via MTR',
-                amount: 80
+                expense: 'Mong Kok to Central (MTR)',
+                amount: 80,
+                type: 'Transportation',
+                subType: 'MTR'
             },
             {
                 expense: 'HKG <> Macau Ferry fee (Klook)',
-                amount: 1900
+                amount: 1900,
+                type: 'Klook',
+                subType: 'Ferry'
             },
             {
                 expense: 'Misc food',
-                amount: 300
+                amount: 300,
+                type: 'Food'
             },
             {
                 expense: 'Macau Misc',
-                amount: 300
+                amount: 300,
+                type: 'Extra'
             },
             {
                 expense: 'Open Top Bus Night Tour Macau with Dinner (Klook)',
-                amount: 1100
+                amount: 1100,
+                type: 'Klook',
+                subType: 'Tour'
             }
-        ]
+        ];
+
+        vm.march20Activities = [
+            {
+                activity: 'Rise',
+                time: '0700H',
+                notes: [
+                    'Check necessities'
+                ]
+            },
+            {
+                activity: 'Breakfast',
+                time: '0745H',
+                notes: [
+                    'Restaurant?'
+                ]
+            },
+            {
+                activity: 'Mong Kok to Tung Chung (MTR)',
+                time: '0830H',
+                notes: [
+                    'Mong Kok to Lai King',
+                    'Interchange at Lai King Platform 3 towards Tung Chung',
+                    'Lai King to Tung Chung'
+                ]
+            },
+            {
+                activity: 'Ngong Ping 360',
+                time: '1000H',
+                notes: [
+                    'Redeem via Klook'
+                ]
+            },
+            {
+                activity: 'Tung Chung to Mong Kok (MTR)',
+                time: '1700H',
+                notes: [
+                    'Tung Chung to Lai King',
+                    'Interchange at Lai King Platform 2 towards Central',
+                    'Lai King to Mong Kok'
+                ]
+            },
+            {
+                activity: 'Rest',
+                time: '1800H'
+            },
+            {
+                activity: 'Dinner',
+                time: '1900H',
+                notes: [
+                    'at Mong Kok'
+                ]
+            },
+            {
+                activity: 'Mong Kok Streets',
+                time: '1930H',
+                notes: [
+                    'Sneaker Lane at Fa Yuen Street',
+                    'Ladies Market at Tung Choi Street'
+                ]
+            }
+        ];
+
+        vm.march20Expenses = [
+            {
+                expense: 'Breakfast',
+                amount: 250,
+                type: 'Food'
+            },
+            {
+                expense: 'Mong Kok to Tung Chung (MTR)',
+                amount: 115,
+                type: 'Transportation',
+                subType: 'MTR'
+            },
+            {
+                expense: '360 Lantau Sky-Land-Sea Day Pass (Round Trip) (Klook)',
+                amount: 2165,
+                type: 'Klook',
+                subType: 'Tour'
+            },
+            {
+                expense: 'Lunch',
+                amount: 250,
+                type: 'Food'
+            },
+            {
+                expense: 'Tung Chung to Mong Kok (MTR)',
+                amount: 115,
+                type: 'Transportation',
+                subType: 'MTR'
+            },
+        ];
+        
     }]);
 
 })(angular);
