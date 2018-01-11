@@ -135,7 +135,7 @@
                 notes: [
                     'Depart Stanley Village to Central. Get on <strong>Bus 6, 6A, 6X, 66 or 260</strong>'
                 ]
-            }, 
+            },
             {
                 activity: 'Back to hotel (Central to Mong Kok via MTR)',
                 time: '1430H'
@@ -143,39 +143,9 @@
             {
                 activity: 'Rest',
                 time: '1500H'
-            },
-            {
-                activity: 'Transfer to Hong Kong Macau Ferry Terminal',
-                time: '1600H',
-                notes: [
-                    'Mong Kok to Central via MTR',
-                    'Walk from Central to Sheung Wan Station',
-                    'From Sheung Wan, walk to the ferry terminal'
-                ]
-            },
-            {
-                activity: 'Depart to Macau (Take 1700H ferry)',
-                time: '1630H',
-                notes: [
-                    'Grab something to eat'
-                ]
-            },
-            {
-                activity: 'Open Top Bus Night Tour Macau',
-                time: '1900H-2030H',
-                notes: [
-                    'From Broadway Macau walk to <strong>Rotunda Da Piscina Olimpica</strong>',
-                    'Ride <strong>Bus 25x</strong> towards Border Gate. Arrive Flower City',
-                    'Walk to Chun Yuet Garden Building',
-                    'Ride <strong>Bus AP1</strong> towards Border Gate. Walk to ferry'
-                ]
-            },
-            {
-                activity: 'Transfer back to Hong Kong (Take 2200H ferry)',
-                time: '2130H'
             }
         ];
-        
+
         vm.march18Expenses = [
             {
                 expense: 'Dimdimsum Dimsum Specialty Store',
@@ -223,32 +193,9 @@
                 subType: 'MTR'
             },
             {
-                expense: 'Mong Kok to Central (MTR)',
-                amount: 80,
-                type: 'Transportation',
-                subType: 'MTR'
-            },
-            {
-                expense: 'HKG <> Macau Ferry fee (Klook)',
-                amount: 1900,
-                type: 'Klook',
-                subType: 'Ferry'
-            },
-            {
                 expense: 'Misc food',
                 amount: 300,
                 type: 'Food'
-            },
-            {
-                expense: 'Macau Misc',
-                amount: 300,
-                type: 'Extra'
-            },
-            {
-                expense: 'Open Top Bus Night Tour Macau with Dinner (Klook)',
-                amount: 1100,
-                type: 'Klook',
-                subType: 'Tour'
             }
         ];
 
@@ -265,31 +212,6 @@
                 time: '0745H',
                 notes: [
                     'Restaurant?'
-                ]
-            },
-            {
-                activity: 'Mong Kok to Tung Chung (MTR)',
-                time: '0830H',
-                notes: [
-                    'Mong Kok to Lai King',
-                    'Interchange at Lai King Platform 3 towards Tung Chung',
-                    'Lai King to Tung Chung'
-                ]
-            },
-            {
-                activity: 'Ngong Ping 360',
-                time: '1000H',
-                notes: [
-                    'Redeem via Klook'
-                ]
-            },
-            {
-                activity: 'Tung Chung to Mong Kok (MTR)',
-                time: '1700H',
-                notes: [
-                    'Tung Chung to Lai King',
-                    'Interchange at Lai King Platform 2 towards Central',
-                    'Lai King to Mong Kok'
                 ]
             },
             {
@@ -318,32 +240,265 @@
                 expense: 'Breakfast',
                 amount: 250,
                 type: 'Food'
-            },
-            {
-                expense: 'Mong Kok to Tung Chung (MTR)',
-                amount: 115,
-                type: 'Transportation',
-                subType: 'MTR'
-            },
-            {
-                expense: '360 Lantau Sky-Land-Sea Day Pass (Round Trip) (Klook)',
-                amount: 2165,
-                type: 'Klook',
-                subType: 'Tour'
-            },
-            {
-                expense: 'Lunch',
-                amount: 250,
-                type: 'Food'
-            },
-            {
-                expense: 'Tung Chung to Mong Kok (MTR)',
-                amount: 115,
-                type: 'Transportation',
-                subType: 'MTR'
-            },
+            }
         ];
-        
+
+        function getMacauActivities() {
+            return [
+                {
+                    activity: 'Transfer to Hong Kong Macau Ferry Terminal',
+                    time: '1600H',
+                    notes: [
+                        'Mong Kok to Central via MTR',
+                        'Walk from Central to Sheung Wan Station',
+                        'From Sheung Wan, walk to the ferry terminal'
+                    ]
+                },
+                {
+                    activity: 'Depart to Macau (Take 1700H ferry)',
+                    time: '1630H',
+                    notes: [
+                        'Grab something to eat'
+                    ]
+                },
+                {
+                    activity: 'Open Top Bus Night Tour Macau',
+                    time: '1900H-2030H',
+                    notes: [
+                        'From Broadway Macau walk to <strong>Rotunda Da Piscina Olimpica</strong>',
+                        'Ride <strong>Bus 25x</strong> towards Border Gate. Arrive Flower City',
+                        'Walk to Chun Yuet Garden Building',
+                        'Ride <strong>Bus AP1</strong> towards Border Gate. Walk to ferry'
+                    ]
+                },
+                {
+                    activity: 'End Macau. Transfer back to Hong Kong (Take 2200H ferry)',
+                    time: '2130H'
+                }
+            ];
+        }
+
+        function getMacauExpenses() {
+            return [
+                {
+                    expense: 'Mong Kok to Central (MTR)',
+                    amount: 80,
+                    type: 'Transportation',
+                    subType: 'MTR'
+                },
+                {
+                    expense: 'HKG <> Macau Ferry fee (Klook)',
+                    amount: 1900,
+                    type: 'Klook',
+                    subType: 'Ferry'
+                },
+                {
+                    expense: 'Macau Misc',
+                    amount: 300,
+                    type: 'Extra'
+                },
+                {
+                    expense: 'Open Top Bus Night Tour Macau with Dinner (Klook)',
+                    amount: 1100,
+                    type: 'Klook',
+                    subType: 'Tour'
+                }
+            ];
+        }
+
+        function getTramOramicTourActivities() {
+            return [
+                {
+                    activity: 'Mong Kok to Sheung Wan (MTR)',
+                    time: '1645H',
+                    notes: [
+                        'Mong Kok to Central',
+                        'Interchange at Platform 4 towards Kennedy Town',
+                        'to Sheung Wan'
+                    ]
+                },
+                {
+                    activity: 'TramOramic Tour Hong Kong',
+                    time: '1720H',
+                    notes: [
+                        'Western Market Terminus: Sheung Wan MTR Exit B, turn right and walk along Des Voeux Road Central for a minute, you\'ll see the tram lines and the station Map'
+                    ]
+                },
+                {
+                    activity: 'End TramOramic Tour Hong Kong',
+                    time: '1945H'
+                }
+            ];
+        }
+
+        function getTramOramicTourExpenses() {
+            return [
+                {
+                    expense: 'Mong Kok to Sheung Wan (MTR)',
+                    amount: 80,
+                    type: 'Transportation',
+                    subType: 'MTR'
+                },
+                {
+                    expense: 'TramOramic Tour Hong Kong (Klook)',
+                    amount: 490,
+                    type: 'Klook',
+                    subType: 'Tour'
+                },
+                {
+                    expense: 'Dinner',
+                    amount: 300,
+                    type: 'Food'
+                }
+            ]
+        }
+
+        function getNgongPing360Activities() {
+            return [
+                {
+                    activity: 'Mong Kok to Tung Chung (MTR)',
+                    time: '0830H',
+                    notes: [
+                        'Mong Kok to Lai King',
+                        'Interchange at Lai King Platform 3 towards Tung Chung',
+                        'Lai King to Tung Chung'
+                    ]
+                },
+                {
+                    activity: 'Ngong Ping 360',
+                    time: '1000H',
+                    notes: [
+                        'Redeem via Klook'
+                    ]
+                },
+                {
+                    activity: 'End Ngong Ping 360. Tung Chung to Mong Kok (MTR)',
+                    time: '1400H',
+                    notes: [
+                        'Tung Chung to Lai King',
+                        'Interchange at Lai King Platform 2 towards Central',
+                        'Lai King to Mong Kok'
+                    ]
+                },
+            ];
+        }
+
+        function getNgongPing360Expenses() {
+            return [
+                {
+                    expense: 'Mong Kok to Tung Chung (MTR)',
+                    amount: 115,
+                    type: 'Transportation',
+                    subType: 'MTR'
+                },
+                {
+                    expense: '360 Lantau Sky-Land-Sea Day Pass (Round Trip) (Klook)',
+                    amount: 1574,
+                    type: 'Klook',
+                    subType: 'Tour'
+                },
+                {
+                    expense: 'Lunch',
+                    amount: 250,
+                    type: 'Food'
+                },
+                {
+                    expense: 'Tung Chung to Mong Kok (MTR)',
+                    amount: 115,
+                    type: 'Transportation',
+                    subType: 'MTR'
+                }
+            ]
+        }
+
+        function getPeakTramActivities() {
+            return [
+                {
+                    activity: 'Depart from Mong Kok to Central via MTR. <strong>Exit K</strong>',
+                    time: '1600H',
+                },
+                {
+                    activity: 'Peak Tram Combo (Klook)',
+                    time: '1800H',
+                    notes: [
+                        'Meet at Central Exit K'
+                    ]
+                },
+                {
+                    activity: 'End Peak Tram',
+                    time: '2000H'
+                }
+            ];
+        }
+
+        function getPeakTramExpenses() {
+            return [
+                {
+                    expense: 'Mong Kok to Central (MTR)',
+                    amount: 80,
+                    type: 'Transportation',
+                    subType: 'MTR'
+                },
+                {
+                    expense: 'Peak Tram Combo (Klook)',
+                    amount: 625,
+                    type: 'Klook',
+                    subType: 'Tour'
+                },
+                {
+                    expense: 'Dinner',
+                    amount: 300,
+                    type: 'Food'
+                }
+            ]
+        }
+
+        function getCrystalBusTourActivities () {
+            return [
+                {
+                    activity: 'Mong Kok to Tsim Sha Tsui (MTR). <strong>Exit L4</strong>',
+                    time: '1755H',
+                    notes: [
+                        'Take L4 exit'
+                    ]
+                },
+                { 
+                    activity: 'Hong Kong Crystal Bus Tour (Klook)',
+                    time: '1825H',
+                    notes: [
+                        'Pick up point: Hankow Road, Tsim Sha Tsui (at the back of The Peninsula Hong Kong)',
+                        'The Peninsula Hotel is located across from MTR Tsim Sha Tsui East (Exit L4)'
+                    ]
+                },
+                {
+                    activity: 'End Hong Kong Crystal Bus Tour (Klook). TST to Mong Kok',
+                    time: '2145H'
+                }
+            ];
+        }
+
+        function getCrystalBusTourExpenses () {
+            return [
+                {
+                    expense: 'Mong Kok to Tsim Sha Tsui (MTR)',
+                    amount: 35,
+                    type: 'Transportation',
+                    subType: 'MTR'
+                },
+                {
+                    expense: 'Hong Kong Crystal Bus Tour (Klook)',
+                    amount: 2141,
+                    type: 'Klook',
+                    subType: 'Tour'
+                },
+                {
+                    expense: 'TST to Mong Kok (MTR)',
+                    amount: 35,
+                    type: 'Transportation',
+                    subType: 'MTR'
+                }
+            ]
+        }
     }]);
 
 })(angular);
