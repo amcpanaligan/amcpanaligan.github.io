@@ -181,7 +181,7 @@
                 type: 'Extra'
             },
             {
-                expense: 'Respulse Bay to Exchange Square (Central) (Bus)',
+                expense: 'Repulse Bay to Exchange Square (Central) (Bus)',
                 amount: 80,
                 type: 'Transportation',
                 subType: 'Bus'
